@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('pagInicial.urls')),
     path('cadclientes/', include('cadClientes.urls')),
     path('cadequipamento/', include('cadEquipamento.urls')),
+    path('consultarativo/', include('consultarAtivo.urls')),
 ]
