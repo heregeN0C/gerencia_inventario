@@ -1,0 +1,27 @@
+{% extends 'src/base.html' %}
+
+{% block 'conteudo' %}
+<h1 class="md-5">Detalhes</h1>
+<dd>
+    <dt>Código</dt>
+    <dl>{{ equipamentos.cod_equipamento }}</dl>
+
+    <dt>Tipo</dt>
+    <dl>{{ equipamentos.tipo_equipamento }}</dl>
+
+    <dt>Marca</dt>
+    <dl>{{ equipamentos.marca_equipamento }}</dl>
+
+    <dt>Modelo</dt>
+    <dl>{{ equipamentos.modelo_equipamento }}</dl>
+
+    <dt>Atendente</dt>
+    <dl>{{ equipamentos.atendente_equipamento }}</dl>
+
+    <dt>Data e hora de chegada</dt>
+    <dl>{{ equipamentos.data_chegada|date:'d/m/Y H:i:s' }}</dl>
+
+    <dt>Solicitações</dt>
+    <dl>{{ equipamentos.solicitacao_equipamento }}</dl>
+</dd>
+{% endblock %}

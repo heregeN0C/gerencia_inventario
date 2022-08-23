@@ -1,4 +1,30 @@
 {% extends 'src/base.html' %}
 
 {% block 'conteudo' %}
+<div style="align-self: center;">
+    <table id="results"  style="margin-left: 150px;">
+        <thead>
+            <tr class="col-md-3">
+                <th>Código</th>
+                <th>Tipo</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Atendente</th>
+                <th>Data de chegada</th>
+            </tr>
+        </thead>
+        {% for equipamento in equipamentos%}
+        <tbody>
+            <tr>
+                <td><a href="{% url 'ver_contato' equipamento.cod_equipamento %}">{{ equipamento.cod_equipamento }}</td>
+                <td>{{ equipamento.tipo_equipamento }}</td>
+                <td>{{ equipamento.marca_equipamento }}</td>
+                <td>{{ equipamento.modelo_equipamento }}</td>
+                <td>{{ equipamento.atendente_equipamento}} </td>
+                <td>{{ equipamento.data_chegada}} </td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
 {% endblock %}
