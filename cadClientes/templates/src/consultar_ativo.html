@@ -4,7 +4,7 @@
 <div style="align-self: center;">
     <table id="results"  style="margin-left: 150px;">
         <thead>
-            <tr class="col-md-3">
+            <tr class="col-lg-10">
                 <th>Código</th>
                 <th>Tipo</th>
                 <th>Marca</th>
@@ -21,7 +21,7 @@
                 <td>{{ equipamento.marca_equipamento }}</td>
                 <td>{{ equipamento.modelo_equipamento }}</td>
                 <td>{{ equipamento.atendente_equipamento}} </td>
-                <td>{{ equipamento.data_chegada}} </td>
+                <td>{{ equipamento.data_chegada|date:'d/m/Y H:i:s'}} </td>
             </tr>
         </tbody>
         {% endfor %}

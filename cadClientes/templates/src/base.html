@@ -9,12 +9,31 @@
     </head>
     {% endblock %}
     <body>
-        <main style="text-align: center;">
-            <div id="col-lat" style="padding-left: 100px; padding-right: 100px;padding-top: 100px;padding-bottom:10%;background-color:aqua;">
-                <div id="menu_principal" style="padding-top: 200px; padding-bottom: 50%;background-color: aliceblue;">
-                    {% block 'conteudo'%}
-                    {% endblock %}
-                 </div>
+        <main style="text-align: center;" class="d-flex flex-nowrap">
+            <div id="sidebar" class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="background-color: #6f42c1; width: 250px; height: 597px;">
+                <div class="container">
+                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                        <img src="LUNIO-LOGO.png" width="16" height="16">
+                        Manu principal
+                    </a>
+                </div>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="/cadclientes" class="nav-link text-white" aria-current="page">Cadastrar cliente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/cadequipamento" class="nav-link text-white" aria-current="page">Cadastrar equipamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/consultarativo" class="nav-link text-white" aria-current="page">Consultar equipamentos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown-divider" style="width: 4.5rem;"></div>
+            <div class="container-fluid" id="conteúdo" style="align-self: center">
+                {% block 'conteudo' %}
+                {% endblock %}
             </div>
         </main>
         <script src="{% static 'bootstrap-4.1.3-dist/js/bootstrap.js' %}"></script>
